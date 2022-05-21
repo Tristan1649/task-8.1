@@ -1,0 +1,18 @@
+#1
+
+dir(c:/Users/USER/Рабочий стол)
+
+#2
+
+f = open('one_file.txt', 'r') as file:
+    for i in range(5):
+        login = input('Введите логин: ')
+        file.write('Логин:')
+        file.write(login)
+        file.write('\n')
+        file.write('Пароль')
+
+#3
+
+with open('two_file.txt', 'w') as f:
+    f.write('pepperoni_pizza')     

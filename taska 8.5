@@ -1,0 +1,37 @@
+{
+        'name': 'Kiri',
+        "age": 19,
+        'height': 181,
+        'profession': 'Python dev',
+        'cash': 1000000 
+    }
+}
+
+phone = input('Vedite phone пример(+996500123456): ')
+name = input('Vedite name : ')
+age = int(input('Vedite age (цифры): '))
+height = int(input('Vedite рост (цифры): '))
+profession = input('Vedite профессию: ')
+cash = int(input('Vedite баланс (цифры)): '))
+
+users.update({
+	phone:{
+		'name': name, 
+		'age':age,
+		'height': height,
+		'profession':profession,
+		'cash': cash
+		}
+		})
+
+print(users)
+
+
+user = users[phone] = {}      # ДЛя того, чтобы зароботало нужно создать такую переменную
+user['name'] = name, 
+user['age'] = age,
+user['height'] = height,
+user['profession'] = profession,
+user['cash'] = cash
+
+print(users)

@@ -1,0 +1,49 @@
+from cgitb import html
+from bs4 import BeautifulSoup
+from matplotlib.pyplot import title
+from numpy import append
+import requests
+
+URL = requests.get('https://www.kivano.kg/mobilnye-telefony').text       # копируем ссылку раздел
+soup=BeautifulSoup(URL,'lxml')                                            # указать формат
+data=soup.find('div', class_="span12 main-content-grid"").find_all('div', class_="item products_listbox oh") # нужно найти родительский div
+print(data) 
+
+data1=soup.find('div', class_="listbox_price text-center")
+print(data1)
+
+URL = requests.get('https://www.kivano.kg/mobilnye-telefony').text
+soup=BeautifulSoup(URL,'lxml')
+data=soup.find('div', class_="list-view").find_all('div', class_="item product_listbox oh")
+name=[]
+price=[]
+
+for i in data:
+    title=i.find('div', class_="listbox_title oh")
+    money=i.find('div', class_="listbox_price text-center") 
+    name.append(title.text)
+    price.append(money.price)
+
+print(name,price)
+
+
+URL = requests.get('https://www.sulpak.kg/f/mobilniye_telefoniy').text       # копируем ссылку раздел
+soup=BeautifulSoup(URL,'lxml')                                            # указать формат
+data=soup.find('div', class_="list-view").find_all('div', class_="item products_listbox oh") # нужно найти родительский div
+print(data)
+
+data1=soup.find('div', class_="listbox_price text-center")
+print(data1)
+
+URL = requests.get('https://www.sulpak.kg/f/mobilniye_telefoniy').text
+soup=BeautifulSoup(URL,'lxml')
+data=soup.find('ul', class_="goods-container").find_all('h3', class_="title ")
+name=[]
+price=[]
+
+
+for i in data:
+    title=i.find('div', class_="listbox_title oh")
+    money=i.find('div', class_="listbox_price text-center") 
+    name.append(title.text)
+    price.append(money.price)

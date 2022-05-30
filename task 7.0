@@ -1,0 +1,98 @@
+# Условия
+
+#1
+a = int(input('введите число от 0 до 100:'))
+
+if a >= 0 and a <= 21:
+    print("разрешено1 ")
+elif a >= 57 and a <= 100:
+    print("разрешено2")
+else:
+    print("запрещено")
+
+#2
+a = int(input("введите число"))
+if a % 2 == 0:
+    print('Четное')
+else:
+    print('нечетное')
+
+if a ** 2 >= 1000:
+    print('a > 1000')
+else:
+    print('a < 1000')
+
+if a % 3 == 0:
+    print('делится')
+else:
+    print('не делиться')
+
+#3
+ a =int(input("Введите число:"))
+ if a <= 1000:
+     print('правильно')
+ elif a >= 1000:
+     print('еще правильнее')
+ else:
+     print('супер правильно')
+
+
+if True:
+    print('True')
+else:
+    print("False")
+
+#4
+a = 10//5
+b = 10/5
+if a == b:
+    print('равны', a+b)
+
+#5
+a = int(input("Введите число:"))
+if a >= 0:
+    print(-a)
+else:
+    print(a)
+
+#6
+a = 10
+b = 5
+if a > b :
+    print('a+2')
+    
+else:
+     print('b+2')
+
+#7
+a = int (input("ввести число"))
+if a >= 0 and a <= 100:
+    print("положительное")
+else:
+    print("отрицательное")
+
+#8
+a = int(input('Введите возраст'))
+if a >= 18:
+    print('совершеннолетний')
+elif a <= 4:
+    print('ребенок')
+else:
+    print('несовшеннолетний')
+
+#9
+a =  45
+b = 6
+if a / b:
+    print('делится', a/ b)
+
+#10
+a = int(input('введите цифру от 1 до 3:'))
+b = int(input('введите цифру от 1 до 3:'))
+c = int(input('введите цифру от 1 до 3:'))
+if a >= b and a>=c:
+    print(a)
+elif b >= a and b <= c:
+    print(b)
+else:
+    print(c)
